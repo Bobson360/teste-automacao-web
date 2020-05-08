@@ -1,6 +1,7 @@
 package tests;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import java.util.Random;
 
@@ -39,6 +40,7 @@ public class FormularioTest extends BaseTest {
 		addSupplier.setItem("Teto Solar");
 		addSupplier.clicarBotaoSubmit();
 		
+		assertTrue(suppliers.existeEmail());
 		assertEquals("nilton" +aleatorio+ "@teste.com", suppliers.obterEmail("nilton" +aleatorio+ "@teste.com"));
 	}
 }

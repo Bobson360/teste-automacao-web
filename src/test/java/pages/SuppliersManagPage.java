@@ -13,4 +13,10 @@ public class SuppliersManagPage extends BasePage {
 	public String obterEmail(String email) {
 		return obterValorCampo(By.xpath("//a[text()='"+ email +"']"));
 	}
+	
+	public boolean existeEmail() {
+		return obterListaCampo(By.xpath("//td[@class='xcrud-current xcrud-actions xcrud-fix']/../.."));
+	}
+	
+	
 }
